@@ -4,81 +4,137 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-section{
-    width: 100%;
-    height: 100vh;
-    background-image: url(image/bg.png);
-    background-size: cover;
-    background-position: center;
+.container{
+    width: 70%;
 }
 
-section nav{
+
+ .nav{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 0 10px #089da1;
-    background: #fff;
     position: fixed;
     left: 0;
     z-index: 100;
+    background-color: #fff;
 }
-
-section nav .logo img{
+.nav_flex{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+}
+.logo{
+    width: 20%;
+}
+ .nav_flex .logo img{
     width: 100px;
     cursor: pointer;
     margin: 8px 0;
 }
-
-section nav ul{
-    list-style: none;
+ .nav_flex .search {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    left: 5%;
 }
-
-section nav li{
+ .nav_flex .search .input_search{
+    width: 60%;
+    padding: 12px 20px;
+    margin: auto 0;
     display: inline-block;
-    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-
-section nav li a{
+ .nav_flex .search .search_icon_1{
+    margin: auto 0;
+    font-size: 25px;
+    padding: 9px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 101;
+}
+.nav_flex .search .search_icon_1:hover{
+    color:#089da1;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    color: #000;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.nav_flex .search .search_icon_2{
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-28%,-50%);
+    color: red;
+    padding: 9px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ .nav_flex .search .search_icon_2:hover{
+    color:#089da1;
+}
+.social_icon{
+    margin: 0 auto;
+    width: 30%;
+}
+ .nav_flex .social_icon i{
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-section nav li a:hover{
-    color: #089da1;
-}
-
-section nav .social_icon i{
-    margin: 0 5px;
-    font-size: 18px;
-}
-
-section nav .social_icon i:hover{
+ .nav_flex .social_icon i:hover{
     color: #089da1;
     cursor: pointer;
 }
 
-section .main{
+ .main{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    top: 10%;
+    margin: 0 auto;
+    margin-bottom: 20%;
 }
 
-section .main h1{
+ .main h1{
     position: relative;
     font-size: 55px;
     top: 80px;
     left: 25px;
 }
 
-section .main h1 span{
+ .main h1 span{
     color: #089da1;
 }
 
-section .main p{
+ .main p{
     width: 650px;
     text-align: justify;
     line-height: 22px;
@@ -87,7 +143,7 @@ section .main p{
     left: 25px;
 }
 
-section .main .main_tag .main_btn{
+ .main .main_tag .main_btn{
     background: #089da1;
     padding: 10px 20px;
     position: relative;
@@ -97,7 +153,7 @@ section .main .main_tag .main_btn{
     text-decoration: none;
 }
 
-section .main .main_img img{
+ .main .main_img img{
     width: 780px;
     position: relative;
     top: 90px;
@@ -110,13 +166,14 @@ section .main .main_img img{
 /*services*/
 
 .services{
-    width: 100%;
     height: auto;
     margin: 35px 0;
+    margin: 0 auto  ;
+    margin-bottom: 10%;
 }
 
 .services .services_box{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -129,6 +186,7 @@ section .main .main_img img{
     height: auto;
     box-shadow: 0 0 8px #089da1;
     padding: 15px 10px;
+    margin-right: -20px;
 }
 
 .services .services_box .services_card i{

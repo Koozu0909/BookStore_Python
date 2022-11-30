@@ -6,63 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store Website</title>
      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
-    <section>
 
-        <nav>
-
-            <div class="logo">
-            <img src="{{url_for('static', filename='/image/logo.png')}}" /> 
-
+        <nav class="nav">
+            <div class="nav_flex container">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='/image/logo.png')}}" /> 
+                    </div>
+                    <div class="search">
+                        <div class="dropdown">
+                            <i class="fa-solid fa-bars search_icon_1 "></i>   
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div> 
+                       
+                        <i class="fa-solid fa-magnifying-glass search_icon_2"></i>
+                        <input class="input_search" type="text" placeholder="tìm kiếm sản phẩm">
+                    </div>
+                    <div class="social_icon">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
             </div>
-
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Featured">Featured</a></li>
-                <li><a href="#Arrivals">Arrivals</a></li>
-                <li><a href="#Reviews">Reviews</a></li>
-                <li><a href="#Blog">Blog</a></li>
-            </ul>
-
-            <div class="social_icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-heart"></i>
-            </div>
-
+         
         </nav>
 
-        <div class="main">
+    
 
-            <div class="main_tag">
-                <h1>WELCOME TO<br><span>BOOK STORE</span></h1>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestias atque laborum 
-                    non fuga ex deserunt. Exercitationem velit ducimus praesentium, obcaecati hic voluptate id 
-                    tenetur fuga illum quidem omnis? Rerum?
-                </p>
-                <a href="#" class="main_btn">Learn More</a>
 
-            </div>
+    <div class="main container">
 
-            <div class="main_img">
-                <img src="{{url_for('static', filename='/image/table.png')}}" /> 
-            </div>
+        <div class="main_tag">
+            <h1>WELCOME TO<br><span>BOOK STORE</span></h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestias atque laborum 
+                non fuga ex deserunt. Exercitationem velit ducimus praesentium, obcaecati hic voluptate id 
+                tenetur fuga illum quidem omnis? Rerum?
+            </p>
+            <a href="#" class="main_btn">Learn More</a>
 
         </div>
 
-    </section>
+        <div class="main_img">
+            <img src="{{url_for('static', filename='/image/table.png')}}" /> 
+        </div>
 
-
-
+    </div>
 
     <!--Services-->
 
-    <div class="services">
+    <div class="services container">
 
         <div class="services_box">
 
@@ -137,248 +139,23 @@
         <h1>Featured Books</h1>
 
         <div class="featured_book_box">
-
+            {% for b in books %}
             <div class="featured_book_card">
 
                 <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_1.jpg')}}" /> 
+                    <img src="{{url_for('static', filename=b.image)}}" /> 
                 </div>
 
                 <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                    <h2>{{b.name}}</h2>
+                    <p class="writer">{{b.author}}</p>
+                    <div class="categories">{{b.genres[0]}},{{b.genres[1]}}</div>
+                    <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
                     <a href="#" class="f_btn">Learn More</a>
                 </div>               
 
             </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_2.jpg')}}" />
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_3.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_4.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_5.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-            
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_6.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_7.png')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_8.png')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_9.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_10.png')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_11.jpg')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_12.png')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_13.png')}}" /> 
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_14.png')}}" />
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            <div class="featured_book_card">
-
-                <div class="featurde_book_img">
-                    <img src="{{url_for('static', filename='/image/book_15.png')}}" />
-                </div>
-
-                <div class="featurde_book_tag">
-                    <h2>Featured Books</h2>
-                    <p class="writer">John Deo</p>
-                    <div class="categories">Thriller, Horror, Romance</div>
-                    <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
-                    <a href="#" class="f_btn">Learn More</a>
-                </div>               
-
-            </div>
-
-            
+            {% endfor %}
 
         </div>
 
