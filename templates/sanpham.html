@@ -1,0 +1,284 @@
+{% extends 'layouts/base.html' %}
+{% block title %}SẢN PHẨM{% endblock %}
+
+
+{% block content %}
+
+
+<!-- Product -->
+<div class="product-container">
+    <div class="product-left">
+        <img src="{{url_for('static', filename='/image/book_15.png')}}" />
+    </div>
+    <div class="product-right">
+        <h1>SÁCH TÊN SÁCH</h1>
+        <div>Nhà cung cấp: </div>
+        <div>Tác giả: </div>
+        <div class="price">105.000 đ</div>
+        <form action="">
+            <label for="quantity">Số lượng: </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="50">
+        </form>
+        <div class="action-submit">
+            <button id="cart">Thêm vào giỏ hàng</button>
+            <button id="submit">Mua ngay</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product -->
+
+
+<!--Books-->
+
+<div class="featured_boks">
+
+    <h1>SẢN PHẨM LIÊN QUAN</h1>
+
+    <div class="featured_book_box">
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_1.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_2.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_3.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_4.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_5.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_6.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_7.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_8.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_9.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_10.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_11.jpg')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_12.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_13.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_14.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+
+            <div class="featurde_book_img">
+                <img src="{{url_for('static', filename='/image/book_15.png')}}" />
+            </div>
+
+            <div class="featurde_book_tag">
+                <h2>Featured Books</h2>
+                <p class="writer">John Deo</p>
+                <div class="categories">Thriller, Horror, Romance</div>
+                <p class="book_price">$25.50<sub><del>$28.60</del></sub></p>
+                <a href="#" class="f_btn">Learn More</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+{% endblock %}

@@ -7,5 +7,10 @@ def home():
     return render_template('index.html')
 
 
+@app.route("/sanpham")
+def sanpham():
+    return render_template('sanpham.html')
+
+
 if __name__ == "__main__":
     app.run()
