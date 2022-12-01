@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+{% block title %}GIỎ HÀNG{% endblock %}
+
+{% block content %}
+<div>
+    <h1>GIỎ HÀNG (1 sản phẩm)</h1>
+</div>
+<div class="header-cart">
+    <div class="header-cart-title">Tên sách</div>
+    <div class="header-cart-quantity">Số lượng</div>
+    <div class="header-cart-price">Thành tiền</div>
+</div>
+
+<div class="container-cart">
+    <div class="cart-container">
+        <div class="item-cart">
+            <div class="item-cart-img">
+                <img src="{{url_for('static', filename='/image/book_13.png')}}" />
+            </div>
+            <div class="item-cart-title">Black History Month</div>
+            <div class="item-cart-number">
+                <input type="number" id="quantity" name="quantity" min="1" max="50">
+            </div>
+            <div class="price">105.000 đ</div>
+            <div class="item-cart-btn">
+                <button><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+{% endblock %}

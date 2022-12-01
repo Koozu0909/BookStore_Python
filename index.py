@@ -1,4 +1,4 @@
-from flask import render_template,request
+from flask import render_template, request
 from __init__ import app
 import utils
 
@@ -17,14 +17,20 @@ def product_list():
     bks = utils.load_books(cate=cate)
     cate = utils.load_categorys()
     return render_template('productsList.html',
-                            books=bks,cates=cate)
+                           books=bks, cates=cate)
 
 
 @app.route("/products/1")
 def product():
     cate = utils.load_categorys()
     return render_template('sanpham.html',
-                            cates=cate)
+                           cates=cate)
+
+
+@app.route("/cart")
+def cart():
+    return render_template('cart.html')
+
 
 if __name__ == '__main__':
 
