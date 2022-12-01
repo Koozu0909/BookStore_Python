@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% block title %}DANH SACH SAN PHAM{% endblock %}
+
+{% block content %}
+<div class="featured_book_box">
+    {% for b in books %}
+    <div class="featured_book_card">
+        <div class="featurde_book_img">
+            <img src="{{url_for('static', filename=b.image)}}" /> 
+        </div>
+        <div class="featurde_book_tag">
+            <h2>{{b.name}}</h2>
+            <p class="writer">{{b.author}}</p>
+            <div class="categories">{{b.genres[0]}},{{b.genres[1]}}</div>
+            <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
+            <a href="#" class="f_btn">Learn More</a>
+        </div>               
+
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

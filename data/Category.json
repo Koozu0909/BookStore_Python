@@ -1,3 +1,20 @@
 [{
-    
-}]
+    "id":1,
+    "name":"literary"
+},{
+    "id":2,
+    "name":"novel"
+},{
+    "id":3,
+    "name":"mentality"
+},{
+    "id":4,
+    "name":"story"
+},{
+    "id":5,
+    "name":"economy"
+},{
+    "id":6,
+    "name":"foreign language"
+}
+]

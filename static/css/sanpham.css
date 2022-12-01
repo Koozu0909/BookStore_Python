@@ -1,44 +1,72 @@
-.product-container{
-    display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.product{
+    width: 100%;    
+    background-color: rgb(235, 230, 230);
+}
+.container {
+    width: 70%;
 }
 
+.product-container{
+    display: flex;
+    margin: 0 auto;
+    background-color: white;
+    padding-top: 0%;
+    border-radius: 10px;
+}
+.product-left{
+    width: 40%;
+    margin-top: 3%;
+}
+.product-left .product-img{
+    width: 80%;
+}
+.product-right{
+    width: 60%;
+    margin-top: 7%;
+    margin-left: 5%;
+}
 .product-right > h1 {
-    color: red;
-    font-size: 50px;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 15px;
 }
 .product-right > div {
-    font-size: 25px;
+    font-size: 17px;
     padding-bottom: 10px;
 }
 
 .product-right > .price{
-    font-size: 40px;
-    color: rgb(226, 89, 89)
+    font-size: 29px;
+    font-weight: 700;
+    color: rgb(226, 89, 89);
 }
 
-.product-right {
-    margin-top: 212px;
-    margin-left: 114px;
-}
 .product-right > form > label {
-    font-size: 25px;
+    font-size: 18px;
 }
-
 input#quantity{
-    margin-left: 26px;
+    margin-left: 25px;
 }
 
 input[type=number] {
-    padding: 6px 8px;
+    padding: 2px 6px;
 }
 
 .action-submit {
-    margin-top: 60px;
+    margin-top: 10px;
+    display: flex  ;
     padding-bottom: 10px;
+    margin-left: 20px;
 }
 
-button#cart {
-    padding: 13px;
+.btn-add-product {
+    padding: 5px;
     margin-right: 30px;
     font-size: 15px;
     color: red;
@@ -48,7 +76,7 @@ button#cart {
     cursor: pointer;
 }
 
-button#submit {
+.btn-buy {
     padding: 13px 55px;
     font-size: 15px;
     color: white;

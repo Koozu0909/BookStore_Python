@@ -4,14 +4,16 @@
             <img src="{{url_for('static', filename='/image/logo.png')}}" />
         </div>
         <div class="search">
+            
             <div class="dropdown">
                 <i class="fa-solid fa-bars search_icon_1 "></i>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    {% for c in cates%}
+                    <a href="/products?genres={{c.name}}">{{c.name}}</a>
+                    {% endfor %}
                 </div>
             </div>
+          
 
             <i class="fa-solid fa-magnifying-glass search_icon_2"></i>
             <input class="input_search" type="text" placeholder="tìm kiếm sản phẩm">

@@ -6,7 +6,7 @@
     "book_id":1,
     "author":"Vu",
     "image":"image/book_1.jpg",
-    "genres":["Novel","Action"]
+    "genres":"literary"
 },{
     "id":2,
     "name":"Book 2",
@@ -15,7 +15,7 @@
     "book_id":2,
     "author":"Tuan",
     "image":"image/book_2.jpg",
-    "genres":["Novel","Action"]
+    "genres":"novel"
 },{
     "id":3,
     "name":"Book 3",
@@ -24,7 +24,7 @@
     "book_id":3,
     "author":"Alex",
     "image":"image/book_3.jpg",
-    "genres":["Novel","Action"]
+    "genres":"economy"
 },{
     "id":4,
     "name":"Book 4",
@@ -33,7 +33,7 @@
     "book_id":4,
     "author":"Pham",
     "image":"image/book_4.jpg",
-    "genres":["Novel","Action"]
+    "genres":"novel"
 },{
     "id":5,
     "name":"Book 5",
@@ -42,7 +42,7 @@
     "book_id":5,
     "author":"Vu",
     "image":"image/book_5.jpg",
-    "genres":["Novel","Action"]
+    "genres":"foreign language"
 },{
     "id":6,
     "name":"Book 6",
@@ -51,6 +51,6 @@
     "book_id":6,
     "author":"Tuan",
     "image":"image/book_6.jpg",
-    "genres":["Novel","Action"]
+    "genres":"economy"
 }
 ]
