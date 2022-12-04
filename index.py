@@ -32,6 +32,11 @@ def cart():
     return render_template('cart.html')
 
 
+@app.route("/login&res")
+def login():
+    return render_template('login&res.html')
+
+
 if __name__ == '__main__':
 
     app.run(debug=True)

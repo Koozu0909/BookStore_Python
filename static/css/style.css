@@ -116,6 +116,19 @@
     margin: 0 auto;
     width: 30%;
 }
+.social_icon .dropdown {
+    margin: 0 0 0 15%;
+}
+.nav_flex .social_icon .dropdown i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav_flex .social_icon .dropdown i:hover {
+    color: #089da1;
+    cursor: pointer;
+}
 
 .nav_flex .social_icon i {
     margin: 0 10px;
