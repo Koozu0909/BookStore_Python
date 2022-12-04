@@ -2,22 +2,88 @@
 {% block title %}DANH SACH SAN PHAM{% endblock %}
 
 {% block content %}
-<div class="featured_book_box">
-    {% for b in books %}
-    <div class="featured_book_card">
-        <div class="featurde_book_img">
-            <img src="{{url_for('static', filename=b.image)}}" /> 
-        </div>
-        <div class="featurde_book_tag">
-            <h2>{{b.name}}</h2>
-            <p class="writer">{{b.author}}</p>
-            <div class="categories">{{b.genres[0]}},{{b.genres[1]}}</div>
-            <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
-            <a href="#" class="f_btn">Learn More</a>
-        </div>               
 
+    <div style=" background-color:#F0F0F0;  height: 20px; width: 100%;">
     </div>
-    {% endfor %}
-
+    <div class="products-list" id="products-list">
+        <div class="products-list-container container">
+            <div class="products-categorys">
+                <h2>NHÓM SẢN PHẨM</h2>
+                <ul class="product-cates">
+                    <li><span class="product-cates-tree-view">Tất Cả Nhóm Sản Phẩm</span>
+                        <ul class="product-cates-tree-view-1">
+                            {% for c in cates%}
+                            <li><a href="/products?genres={{c.name}}">{{c.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                      </li>
+                </ul>
+                <div class="products-price">
+                    <h2>GIÁ</h2>
+                    <div class="product-price-rate">
+                        <input onchange='check(this)' class="cb-change" type="checkbox">
+                        <span>5000D</span>
+                    </div>
+                    <div class="product-price-rate">
+                        <input onchange='check(this)' class="cb-change" type="checkbox">
+                        <span>5000D</span>
+                    </div>
+                    <div class="product-price-rate">
+                        <input onchange='check(this)' class="cb-change" type="checkbox">
+                        <span>5000D</span>
+                    </div>
+                    <div class="product-price-rate">
+                        <input onchange='check(this)' class="cb-change" type="checkbox">
+                        <span>5000D</span>
+                    </div>
+                    <div class="product-price-rate">
+                        <input onchange='check(this)' class="cb-change" type="checkbox">
+                        <span>5000D</span>
+                    </div>
+                </div>
+            </div>
+            <div class="all-products">
+                <div class="product_book_box">
+                    {% for b in books %}
+                    <div class="product_book_card">
+                        <div class="product_book_img">
+                            <img src="{{url_for('static', filename=b.image)}}" /> 
+                        </div>
+                        <div class="prosuct_book_tag">
+                            <h2>{{b.name}}</h2>
+                            <p class="writer">{{b.author}}</p>
+                            <div class="categories">{{b.genres}}</div>
+                            <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
+                            <a href="#" class="f_btn">Learn More</a>
+                        </div>               
+                
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div style=" background-color:#F0F0F0;  height: 20px; width: 100%;">
+    </div>
 </div>
+<script>
+    var toggler = document.getElementsByClassName("product-cates-tree-view");
+    var i;
+    
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".product-cates-tree-view-1").classList.toggle("active");
+        this.classList.toggle("product-cates-tree-view-down");
+      });
+    }
+
+    function check(element){
+    if(element.checked){
+      var checkboxes = document.getElementsByClassName('cb-change');
+        for(var i=0;i<checkboxes.length;i++){
+           if(checkboxes[i]!=element)
+             checkboxes[i].checked = false;
+        }
+    }
+}
+    </script>
 {% endblock %}
