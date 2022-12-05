@@ -134,6 +134,7 @@
     margin: 0 10px;
     font-size: 20px;
     cursor: pointer;
+    color: #000;
 }
 
 .nav_flex .social_icon i:hover {

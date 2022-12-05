@@ -1,7 +1,7 @@
 [{
     "id":1,
-    "name":"Book 1",
-    "price": 29.85,
+    "name":"Book AWS",
+    "price": 29,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":1,
     "author":"Vu",
@@ -9,8 +9,8 @@
     "genres":"literary"
 },{
     "id":2,
-    "name":"Book 2",
-    "price": 23.95,
+    "name":"Book JFDD",
+    "price": 23,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":2,
     "author":"Tuan",
@@ -18,8 +18,8 @@
     "genres":"novel"
 },{
     "id":3,
-    "name":"Book 3",
-    "price": 29.85,
+    "name":"Book KGS",
+    "price": 29,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":3,
     "author":"Alex",
@@ -27,8 +27,8 @@
     "genres":"economy"
 },{
     "id":4,
-    "name":"Book 4",
-    "price": 29.85,
+    "name":"Book EWAFA",
+    "price": 29,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":4,
     "author":"Pham",
@@ -36,8 +36,8 @@
     "genres":"novel"
 },{
     "id":5,
-    "name":"Book 5",
-    "price": 29.85,
+    "name":"Book QWDHIBS",
+    "price": 29,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":5,
     "author":"Vu",
@@ -45,8 +45,8 @@
     "genres":"foreign language"
 },{
     "id":6,
-    "name":"Book 6",
-    "price": 29.85,
+    "name":"Book DJBFA",
+    "price": 29,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":6,
     "author":"Tuan",
@@ -54,8 +54,8 @@
     "genres":"economy"
 },{
     "id":7,
-    "name":"Book 7",
-    "price": 23.95,
+    "name":"Book HCJBCKA",
+    "price": 23,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":8,
     "author":"Tuan",
@@ -63,8 +63,8 @@
     "genres":"novel"
 },{
     "id":8,
-    "name":"Book ",
-    "price": 23.95,
+    "name":"Book Dwefwa",
+    "price": 23,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":8,
     "author":"Tuan",
@@ -72,8 +72,8 @@
     "genres":"novel"
 },{
     "id":9,
-    "name":"Book 9",
-    "price": 93.95,
+    "name":"Book B GVSS",
+    "price": 93,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":9,
     "author":"Tuan",
@@ -81,8 +81,8 @@
     "genres":"novel"
 },{
     "id":10,
-    "name":"Book 10",
-    "price": 103.95,
+    "name":"Book EgwegW",
+    "price": 103,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":10,
     "author":"Tuan",
@@ -90,8 +90,8 @@
     "genres":"novel"
 },{
     "id":11,
-    "name":"Book 11",
-    "price": 113.95,
+    "name":"Book CbhHB",
+    "price": 113,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":11,
     "author":"Tuan",
@@ -99,8 +99,8 @@
     "genres":"novel"
 },{
     "id":12,
-    "name":"Book 12",
-    "price": 123.95,
+    "name":"Book DWJBDWB",
+    "price": 123,
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "book_id":12,
     "author":"Tuan",

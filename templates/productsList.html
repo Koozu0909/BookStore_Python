@@ -20,25 +20,36 @@
                 </ul>
                 <div class="products-price">
                     <h2>GIÁ</h2>
-                    <div class="product-price-rate">
-                        <input onchange='check(this)' class="cb-change" type="checkbox">
-                        <span>5000D</span>
-                    </div>
-                    <div class="product-price-rate">
-                        <input onchange='check(this)' class="cb-change" type="checkbox">
-                        <span>5000D</span>
-                    </div>
-                    <div class="product-price-rate">
-                        <input onchange='check(this)' class="cb-change" type="checkbox">
-                        <span>5000D</span>
-                    </div>
-                    <div class="product-price-rate">
-                        <input onchange='check(this)' class="cb-change" type="checkbox">
-                        <span>5000D</span>
-                    </div>
-                    <div class="product-price-rate">
-                        <input onchange='check(this)' class="cb-change" type="checkbox">
-                        <span>5000D</span>
+                    <form action="">
+                        <div class="product-price-rate">
+                            <input onchange='check(this)' class="cb-change" type="checkbox" name="price" value="20">
+                            <span> <= 20</span>
+                        </div>
+                        <div class="product-price-rate">
+                            <input onchange='check(this)' class="cb-change" type="checkbox" name="price" value="30">
+                            <span> <= 30</span>
+                        </div>
+                        <div class="product-price-rate">
+                            <input onchange='check(this)' class="cb-change" type="checkbox" name="price" value="80">
+                            <span> <= 80</span>
+                        </div>
+                        <div class="product-price-rate">
+                            <input onchange='check(this)' class="cb-change" type="checkbox" name="price" value="100">
+                            <span> <= 100</span>
+                        </div>
+                        <div class="product-price-rate">
+                            <input onchange='check(this)' class="cb-change" type="checkbox" name="price" value="120">
+                            <span> <= 120</span>
+                        </div>
+                        <input type="submit" value="Tìm">
+                    </form>
+                </div>
+                <div>
+                    <div>
+                        <form action="">
+                            <input type="text" name="keyword" placeholder="nhập sản phẩm muốn tìm">
+                            <input type="submit" value="Tìm">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -54,7 +65,7 @@
                             <p class="writer">{{b.author}}</p>
                             <div class="categories">{{b.genres}}</div>
                             <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
-                            <a href="#" class="f_btn">Learn More</a>
+                            <a href="{{url_for('product_detail', book_id=b.book_id)}}" class="f_btn">Learn More</a>
                         </div>               
                 
                     </div>

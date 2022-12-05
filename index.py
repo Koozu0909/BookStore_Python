@@ -14,17 +14,20 @@ def home():
 @app.route("/products")
 def product_list():
     cate = request.args.get('genres')
-    bks = utils.load_books(cate=cate)
+    kw = request.args.get('keyword')
+    price = request.args.get('price')
+    bks = utils.load_books(cate=cate, kw=kw, price=price)
     cate = utils.load_categorys()
     return render_template('productsList.html',
                            books=bks, cates=cate)
 
 
-@app.route("/products/1")
-def product():
+@app.route("/products/<int:book_id>")
+def product_detail(book_id):
     cate = utils.load_categorys()
+    book = utils.get_book_by_id(book_id)
     return render_template('sanpham.html',
-                           cates=cate)
+                           cates=cate, book=book)
 
 
 @app.route("/cart")

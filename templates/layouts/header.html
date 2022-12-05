@@ -8,7 +8,7 @@
                 <i class="fa-solid fa-bars search_icon_1 "></i>
                 <div class="dropdown-content">
                     {% for c in cates%}
-                    <a href="/products?genres={{c.name}}">{{c.name}}</a>
+                    <a href="{{url_for('product_list', genres=c.name)}}">{{c.name}}</a>
                     {% endfor %}
                 </div>
             </div>
@@ -19,11 +19,11 @@
             <div class="dropdown">
                 <i class="fa-solid fa-user"></i>
                 <div class="dropdown-content">
-                    <a href="#">Đăng nhập</a>
-                    <a href="#">Đăng ký</a>
+                    <a href="/login&res">Đăng nhập</a>
+                    <a href="/login&res">Đăng ký</a>
                 </div>
             </div>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
             <i class="fa-solid fa-heart"></i>
         </div>
     </div>
