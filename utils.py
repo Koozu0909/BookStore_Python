@@ -32,7 +32,7 @@ def get_book_by_id(book_id):
     books = read_json(os.path.join(app.root_path, 'data/Books.json'))
 
     for b in books:
-        if b['book_id'] == book_id:
+        if b['id'] == book_id:
             return b
 
     return None
