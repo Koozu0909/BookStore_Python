@@ -65,7 +65,7 @@
                             <p class="writer">{{b.author}}</p>
                             <div class="categories">{{b.genres}}</div>
                             <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
-                            <a href="{{url_for('product_detail', book_id=b.book_id)}}" class="f_btn">Learn More</a>
+                            <a href="{{url_for('product_detail', book_id=b.id)}}">Learn More</a>
                         </div>               
                 
                     </div>
