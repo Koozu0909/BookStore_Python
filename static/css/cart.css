@@ -44,6 +44,9 @@
 }
 .item-cart{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 .item-cart-img {
     flex-basis: 10%;
@@ -53,13 +56,11 @@
 }
 .item-cart-title {
     flex-basis: 25%;
-    padding-top: 85px;
     color: rgb(226, 89, 89);
-    font-size: 29px;
+    font-size: 20px;
 }
 .item-cart-number {
     flex-basis: 30%;
-    padding-top: 85px;
 }
 input#quantity{
     width: 30%;
@@ -67,16 +68,19 @@ input#quantity{
 }
 .price{
     flex-basis: 25%;
-    padding-top: 85px;
     font-size: 29px;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(226, 89, 89);
+    margin-left: 30px;
 }
 .item-cart-btn {
     flex-basis: 23%;
-    padding-top: 85px;
 }
-.item-cart-btn > button{
-    width: 14%;
-    height: 20%;
+.item-cart-btn > input{
+    width: 30%;
+}
+
+.quantity-cart .cart-number{
+    margin: 0;
+    position: unset;
 }

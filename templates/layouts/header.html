@@ -4,9 +4,10 @@
             <a href="/"> <img src="{{url_for('static', filename='/image/logo.png')}}" /></a>
         </div>
         <div class="search">
-            <div class="dropdown">
+            <div class="drop_down">
                 <i class="fa-solid fa-bars search_icon_1 "></i>
-                <div class="dropdown-content">
+                <div class="dropdown_content">
+                    <a href="{{url_for('product_list')}}">all</a>
                     {% for c in cates%}
                     <a href="{{url_for('product_list', genres=c.name)}}">{{c.name}}</a>
                     {% endfor %}
@@ -16,14 +17,28 @@
             <input class="input_search" type="text" placeholder="tìm kiếm sản phẩm">
         </div>
         <div class="social_icon">
-            <div class="dropdown">
-                <i class="fa-solid fa-user"></i>
-                <div class="dropdown-content">
-                    <a href="/login&res">Đăng nhập</a>
-                    <a href="/login&res">Đăng ký</a>
+            {% if current_user.is_authenticated %}
+            <div class="drop_down">
+                {% if current_user.avatar %}
+                <img class="header-avatar" src="{{current_user.avatar}}" alt="">
+                {% else %}
+                <img class="header-avatar default"  src="{{url_for('static', filename='image/avatar-white.jpg')}}" alt="">
+                {% endif %}
+                <div class="dropdown_content">
+                    <p class="avatar-username">{{current_user.username}}</p>
+                    <a href="{{url_for('user_signout')}}">Đăng xuất</a>
                 </div>
             </div>
-            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            {% else %}
+            <div class="drop_down">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown_content">
+                    <a href="{{url_for('login')}}">Đăng nhập</a>
+                    <a href="{{url_for('register')}}">Đăng ký</a>
+                </div>
+            </div>
+            {% endif %}
+            <a href="{{url_for('cart')}}"><i class="fa-solid fa-cart-shopping"></i> <p class="cart-number" >{{cart_stats.total_quantity}}</p></a>
             <i class="fa-solid fa-heart"></i>
         </div>
     </div>

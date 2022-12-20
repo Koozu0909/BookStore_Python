@@ -71,6 +71,15 @@
                     </div>
                     {% endfor %}
             </div>
+            <nav aria-label="Page navigation example">
+                {% if pages > 1%}
+                <ul class="pagination">
+                    {% for p in range(1, pages+1) %}
+                    <li class="page-item"><a class="page-link" href="{{url_for('product_list', page=p)}}">{{p}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+              </nav>
         </div>
     </div>
     <div style=" background-color:#F0F0F0;  height: 20px; width: 100%;">

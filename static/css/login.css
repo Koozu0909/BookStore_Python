@@ -113,24 +113,19 @@ font-family: 'Raleway', sans-serif; */
     color: #4E8CA5;
 }
 .container .signup{
-    pointer-events: none;
-}
-.container.active .signup{
     pointer-events: initial;
 }
+
 .container .signup .content{
-    top: 100%;
+    top: 0  ;
 }
 .container.active .signup .content{
     top: 0;
 }
 .container .signup .login-img{
-    top: -100%;
-    transition: 0.5s;
-}
-.container.active .signup .login-img{
     top: 0;
 }
+
 .container .signin .content{
     top:0;
 }

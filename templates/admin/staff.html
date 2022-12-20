@@ -1,0 +1,16 @@
+{% extends 'admin/base.html' %}
+{% block body %}
+{% if current_user.is_authenticated %}
+<h1>Chào mừng Quản lý</h1>
+{% else %}
+<form method="post" action="{{url_for('signin_staff')}}" >
+    <h2>Dang nhap Staff</h2>
+    <input type="text" placeholder="Username" id="name" name="username">
+    <input type="password" placeholder="Password" name="password">
+    <input type="submit" value="Login">
+    {% if err_msg %}
+    <p> {{err_msg}}</p>
+    {% endif%}
+</form>
+{% endif %}
+{% endblock%}

@@ -2,35 +2,57 @@
 {% block title %}GIỎ HÀNG{% endblock %}
 
 {% block content %}
+{% if 'cart' in session and session['cart'] %}
 <div class="full-cart">
-    <div>
-        <h1>GIỎ HÀNG (1 sản phẩm)</h1>
-    </div>
     <div class="header-cart" id="header-cart">
         <div class="header-cart-container container">
             <div class="header-cart-title">Tên sách</div>
             <div class="header-cart-quantity">Số lượng</div>
-            <div class="header-cart-price">Thành tiền</div>
+            <div class="header-cart-price">Giá tiền</div>
         </div>
     </div>
     <div class="cart" id="cart">
         <div class="cart-container container">
+            {% for c in session['cart'].values() %}
             <div class="item-cart">
                 <div class="item-cart-img">
-                    <img src="{{url_for('static', filename='/image/book_13.png')}}" />
+                    <img src="{{url_for('static', filename=c.image)}}" />
                 </div>
-                <div class="item-cart-title">Black History Month</div>
+                <div class="item-cart-title">{{c.name}}</div>
                 <div class="item-cart-number">
-                    <input type="number" id="quantity" name="quantity" min="1" max="50">
+                    <input type="number" min="1"  value="{{c.quantity}}" onblur="updateCart({{c.id}}, this)">
                 </div>
-                <div class="price">105.000 đ</div>
+                <div class="price">{{c.price}}$</div>
                 <div class="item-cart-btn">
-                    <button><i class="fa-solid fa-trash"></i></button>
+                    <input type="button" class="btn btn-danger"  name="" id="" value="Xóa">
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
+    <div class="amount" id="amount">
+        <div class="container">
+            <h4 class="quantity-cart">Tong san pham: <span class="cart-number">{{ cart_stats.total_quantity}}</span></h4>
+            <h4>Tong tien: <span id="total_amount">{{ cart_stats.total_amount}}$</span> </h4>
+        </div>
+    </div>
+    
+    <div class="pay" id="pay">
+        <div class="container">
+            {% if current_user.is_authenticated %}
+            <input type="button" value="Thanh toan" class="btn btn-success" onclick="pay()">
+            {% else %}
+            <a href="{{url_for('login', next='cart')}}">Đăng nhap để thanh toán</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    
+
 </div>
+{% else %}
+<div class="full-cart"><p class="container" style=" margin-bottom: 0; height: 60vh;">ko co san pham nao trong gio</p></div>
+{% endif %}
 
 <div style=" background-color:rgb(235, 230, 230);  height: 20px; width: 100%;">
 </div>
