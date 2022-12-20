@@ -93,6 +93,18 @@ def update_cart():
     return jsonify(utils.count_cart(cart))
 
 
+@app.route('/api/cart/<int:book_id>', methods=['delete'])
+def delete_cart(book_id):
+    data = request.json
+    cart = session.get('cart')
+    id = str(data.get('book_id'))
+    if cart and id in cart:
+        del cart[id]
+        session['cart'] = cart
+
+    return jsonify(utils.count_cart(cart))
+
+
 @app.context_processor
 def common_response():
     return {
@@ -130,7 +142,7 @@ def login():
 
 @app.route("/user-logout")
 def user_signout():
-    
+
     ()
     return redirect(url_for('login'))
 

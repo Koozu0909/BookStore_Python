@@ -14,7 +14,7 @@
     <div class="cart" id="cart">
         <div class="cart-container container">
             {% for c in session['cart'].values() %}
-            <div class="item-cart">
+            <div class="item-cart" id="cart{{ c.id }}">
                 <div class="item-cart-img">
                     <img src="{{url_for('static', filename=c.image)}}" />
                 </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="price">{{c.price}}$</div>
                 <div class="item-cart-btn">
-                    <input type="button" class="btn btn-danger"  name="" id="" value="Xóa">
+                    <input type="button" class="btn btn-danger" onclick="deleteCart({{c.id}})"  name="" id="" value="Xóa">
                 </div>
             </div>
             {% endfor %}
@@ -33,7 +33,7 @@
     <div class="amount" id="amount">
         <div class="container">
             <h4 class="quantity-cart">Tong san pham: <span class="cart-number">{{ cart_stats.total_quantity}}</span></h4>
-            <h4>Tong tien: <span id="total_amount">{{ cart_stats.total_amount}}$</span> </h4>
+            <h4>Tong tien: <span id="total_amount">{{ cart_stats.total_amount}} $</span> </h4>
         </div>
     </div>
     
