@@ -8,7 +8,7 @@ app.secret_key = '$@F!#GWWT#$^@#GWT#GWGWG'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:kiet741852963@localhost/bookstore?charset=utf8mb4'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['PAGE_SIZE'] = 10
+app.config['PAGE_SIZE'] = 12
 
 cloudinary.config(
     cloud_name='dcwyrfw4i',

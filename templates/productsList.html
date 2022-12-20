@@ -61,9 +61,9 @@
                             <img src="{{url_for('static', filename=b.image)}}" /> 
                         </div>
                         <div class="prosuct_book_tag">
-                            <h2>{{b.name}}</h2>
-                            <p class="writer">{{b.author}}</p>
-                            <div class="categories">{{b.genres}}</div>
+                            <div class="prosuct_book_tag_name">{{b.name}}</div>
+                            <p class="writer">Tác giả:{{b.author}}</p>
+                            <div class="categories">Thể loại:{{b.genres}}</div>
                             <p class="book_price">${{b.price}}<sub><del>$28.60</del></sub></p>
                             <a href="{{url_for('product_detail', book_id=b.id)}}">Learn More</a>
                         </div>               

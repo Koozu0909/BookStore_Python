@@ -83,10 +83,31 @@
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  .prosuct_book_tag{
+    margin: 14px;
+    height: 60%;
+  }
+  .prosuct_book_tag .prosuct_book_tag_name{
+    font-size: 15px;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 20px;
+  }
+  .prosuct_book_tag p{
+    font-size: 13px;
+    margin: 0;
+  }
+  .prosuct_book_tag a{
+    text-decoration: none;
+  }
+  .prosuct_book_tag .categories{
+    font-size: 13px;
+  }
   .product_book_card{
-    width: 18%;
+    width: 23%;
     margin: 1rem 0.3rem;
     align-items: center;
+    height: 400px;
 
   }
   .product_book_card:hover{

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, Enum, Boolean, DateTime, ForeignKey, Text
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from __init__ import db, app
 from datetime import datetime
 from enum import Enum as UserEnum
@@ -42,6 +42,12 @@ class Category(BaseModel):
         return self.name
 
 
+prod_tag = db.Table('prod_tag',
+                    Column('book_id', Integer, ForeignKey(
+                        'book.id'), primary_key=True),
+                    Column('tag_id', Integer, ForeignKey('tag.id'), primary_key=True))
+
+
 class Book(BaseModel):
     __tablename__ = 'book'
 
@@ -55,6 +61,15 @@ class Book(BaseModel):
     create_date = Column(DateTime, default=datetime.now())
     category_id = Column(Integer, ForeignKey(Category.id))
     receipt_details = relationship('ReceiptDetail', backref='book', lazy=True)
+    tags = relationship('Tag', secondary='prod_tag', lazy='subquery',
+                        backref=backref('books', lazy=True))
+
+    def __str__(self):
+        return self.name
+
+
+class Tag(BaseModel):
+    name = Column(String(50), nullable=False, unique=True)
 
     def __str__(self):
         return self.name

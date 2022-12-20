@@ -3,7 +3,7 @@ import hashlib
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import BaseView, expose, AdminIndexView
-from models import Category, Book, User, UserRole
+from models import Category, Book, Tag, User, UserRole
 from flask_login import current_user, logout_user
 from flask import redirect, request
 import utils
@@ -16,9 +16,19 @@ class AdminModelView(ModelView):
         return current_user.is_authenticated and current_user.user_role == UserRole.ADMIN
 
 
-class BookView(AdminModelView):
+class StaffModelView(ModelView):
+    def is_accessible(self):
+        return current_user.is_authenticated and current_user.user_role == UserRole.STAFF
+
+
+class BookView(ModelView):
     can_view_details = True
     column_searchable_list = ('name', 'genres', 'description', 'author')
+
+    def is_accessible(self):
+        if (current_user.is_authenticated):
+            if (current_user.user_role == UserRole.STAFF or current_user.user_role == UserRole.ADMIN):
+                return True
 
 
 class LogoutView(BaseView):
@@ -45,13 +55,21 @@ class StatsView(BaseView):
                                                    to_date=to_date))
 
     def is_accessible(self):
-        return current_user.is_authenticated
+        if (current_user.is_authenticated):
+            if (current_user.user_role == UserRole.STAFF or current_user.user_role == UserRole.ADMIN):
+                return True
 
 
 class StaffLogin(BaseView):
     @expose('/')
     def index(self):
         return self.render('admin/staff.html')
+
+    def is_visible(self):
+        if (current_user.is_authenticated):
+            return False
+        else:
+            return True
 
 
 class AdminIndex(AdminIndexView):
@@ -66,6 +84,7 @@ admin = Admin(app=app,
               template_mode='bootstrap4',
               index_view=AdminIndex())
 
+admin.add_view(AdminModelView(Tag, db.session))
 admin.add_view(AdminModelView(Category, db.session))
 admin.add_view(AdminModelView(User, db.session))
 admin.add_view(BookView(Book, db.session))
